@@ -1,22 +1,52 @@
-# Secrets & local env
+# ====================================================================
+# BlueWhiteIQ - Git Ignore File
+# Author: Avni Dubey
+# Purpose: Prevent sensitive data, temporary, and generated files
+#          from being committed to the Git repository.
+# ====================================================================
+
+# 🔒 Secrets & Local Environment Files
 .env
 .env.*
 *.env
 *.key
 *.pem
 
-# Editor/OS cruft
+# 🧰 Editor / OS Configuration Files
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
-# Outputs / exports / built docs
+# 📊 Outputs / Exports / Generated Reports
 outputs/
 exports/
 reports/_site/
+reports/*.html
+reports/*.pdf
+reports/*.docx
 
-# Data placeholders (we never commit data)
+# 📦 Data Files (Do not commit any data)
 data/
 data_raw/
 data_tmp/
+data_backup/
+
+# 🗂️ Cache / Temporary Files
+*_cache/
+*.tmp
+*.log
+*.bak
+
+# 📘 R / Quarto / Python Project Artifacts
+.Rhistory
+.Rproj.user/
+*.RData
+*.Rproj
+__pycache__/
+*.ipynb_checkpoints/
+
+# 📁 System-Level
+*.zip
+*.tar.gz
+*.7z
