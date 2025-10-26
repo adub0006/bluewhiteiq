@@ -1,52 +1,103 @@
-# ====================================================================
-# BlueWhiteIQ - Git Ignore File
+# =========================================================
+# BlueWhiteIQ Project - Git Ignore Configuration
 # Author: Avni Dubey
-# Purpose: Prevent sensitive data, temporary, and generated files
-#          from being committed to the Git repository.
-# ====================================================================
+# Purpose: Keep repository clean and reproducible
+# =========================================================
 
-# 🔒 Secrets & Local Environment Files
+# -----------------------------
+# 1. Environment / Secrets
+# -----------------------------
 .env
 .env.*
 *.env
 *.key
 *.pem
 
-# 🧰 Editor / OS Configuration Files
+# -----------------------------
+# 2. OS & Editor Files
+# -----------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE folders
 .vscode/
 .idea/
-.DS_Store
-Thumbs.db
 
-# 📊 Outputs / Exports / Generated Reports
-outputs/
-exports/
+# -----------------------------
+# 3. Build & Exported Outputs
+# -----------------------------
+# Quarto / R Markdown rendered output
+*_cache/
+*.knit.md
+*.utf8.md
+*.html
+*.pdf
+*.docx
+*.pptx
+
+# Rendered report folders
 reports/_site/
-reports/*.html
-reports/*.pdf
-reports/*.docx
+reports/_freeze/
+reports/_publish/
 
-# 📦 Data Files (Do not commit any data)
+# Tableau exports or temp files
+*.twb~
+*.twbx~
+*.hyper
+
+# -----------------------------
+# 4. Data Files (not committed)
+# -----------------------------
 data/
 data_raw/
 data_tmp/
-data_backup/
 
-# 🗂️ Cache / Temporary Files
-*_cache/
-*.tmp
-*.log
-*.bak
+# -----------------------------
+# 5. Outputs / Exports
+# -----------------------------
+# Ignore everything in outputs
+outputs/*
+# ...but keep reproducible examples
+!outputs/*.csv
+!outputs/README.md
 
-# 📘 R / Quarto / Python Project Artifacts
-.Rhistory
-.Rproj.user/
-*.RData
-*.Rproj
+# -----------------------------
+# 6. Python / R temp files
+# -----------------------------
 __pycache__/
-*.ipynb_checkpoints/
+*.Rhistory
+*.RData
+*.Rproj.user/
+*.Rproj
+.Rapp.history
+.RDataTmp
 
-# 📁 System-Level
+# -----------------------------
+# 7. Logs / Miscellaneous
+# -----------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.old
 *.zip
+*.tar
 *.tar.gz
-*.7z
+*.Rout
+*.out
+
+# -----------------------------
+# 8. Node / JS (if Quarto extensions are used)
+# -----------------------------
+node_modules/
+dist/
+.cache/
+.yarn/
+
