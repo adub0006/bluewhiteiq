@@ -692,3 +692,13 @@ Two Pareto plots were produced to assess value concentration:
 -   Introduce loyalty incentives (exclusive events, early ticket access) to sustain renewal probability.
 
 -   Monitor mid-tier fans (Silver) with declining engagement to prevent churn.
+
+# Appendix C
+
+### Academic Integrity Statement: Use of Generative AI
+
+Limited assistance from ChatGPT (GPT-5 Thinking) by OpenAI was used during the preparation of this report. The tool supported language editing, structural organisation, formatting guidance in Quarto, and suggestions for improving clarity or presentation.
+
+All data analysis, modelling, interpretation, numerical results, and written arguments are entirely my own work. No AI system was used to generate analytical outputs, research content, or conclusions. All materials produced by the AI were reviewed, verified, and edited to ensure academic accuracy and alignment with Monash University’s Educational Integrity standards.
+
+Limited language and formatting support was provided using ChatGPT (GPT-5 Thinking) [@openai_chatgpt_2025].
